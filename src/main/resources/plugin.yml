@@ -1,0 +1,32 @@
+name: RexChatGames
+version: '${project.version}'
+main: me.rexsystems.rexChatGames.RexChatGames
+api-version: '1.21'
+folia-supported: true
+authors: [RexSystems]
+description: Chat games for Paper servers
+website: https://rexsystems.me
+softdepend: [PlaceholderAPI]
+
+commands:
+  rexchatgames:
+    description: RexChatGames command
+    aliases: [rcg, chatgames]
+    usage: /rexchatgames <start|stop|toggle|top|status|reload|help>
+
+permissions:
+  rexchatgames.play:
+    description: Answer a running chat game
+    default: true
+  rexchatgames.toggle:
+    description: Hide or show chat game messages and sounds
+    default: true
+  rexchatgames.start:
+    description: Start or stop a chat game
+    default: op
+  rexchatgames.reload:
+    description: Reload RexChatGames
+    default: op
+  rexchatgames.admin:
+    description: Use RexChatGames admin commands
+    default: op

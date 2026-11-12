@@ -1,0 +1,159 @@
+# RexChatGames
+# Messages accept MiniMessage, legacy & codes, &#RRGGBB, and #RRGGBB.
+# {player}, {prompt}, {answer}, and {hover} are inserted as plain text.
+# Put color in the template.
+# words.yml and trivia.yml are separate files. Reload never overwrites them.
+
+config-version: 1
+
+settings:
+  # Seconds between automatic rounds. Values under 10 are raised to 10.
+  interval-seconds: 90
+  # Seconds before an unanswered round ends. Values under 15 are raised to 15.
+  timeout-seconds: 45
+  min-players: 1
+  case-sensitive: false
+  # Used only when case-sensitive is true.
+  warn-on-capitalization: true
+
+worlds:
+  disabled: []
+
+sounds:
+  start:
+    enabled: true
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.4
+  win:
+    enabled: true
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 1.0
+    pitch: 1.0
+
+title:
+  enabled: true
+  title: "<gold>{type-label}"
+  subtitle: "<white>{prompt}"
+  fade-in: 5
+  stay: 50
+  fade-out: 10
+
+actionbar:
+  enabled: true
+  text: "<yellow>{prompt}"
+
+messages:
+  prefix: "<gray>[<#f75634>RexChatGames<gray>] "
+  no-permission: "{prefix}<red>You do not have permission to do that."
+  players-only: "{prefix}<red>Only a player can do that."
+  reload: "{prefix}<green>Configuration reloaded."
+  help-header: "{prefix}<white>RexChatGames"
+  help:
+    - "<gray>/rexchatgames help <dark_gray>- <white>Show this help"
+    - "<gray>/rexchatgames start [type] <dark_gray>- <white>Start a round"
+    - "<gray>/rexchatgames stop <dark_gray>- <white>Stop the current round"
+    - "<gray>/rexchatgames toggle <dark_gray>- <white>Hide or show game messages"
+    - "<gray>/rexchatgames top [type] <dark_gray>- <white>Top wins, plus the record when a type is set"
+    - "<gray>/rexchatgames status <dark_gray>- <white>Last time each game started"
+    - "<gray>/rexchatgames reload <dark_gray>- <white>Reload the configuration"
+  start: '<hover:show_text:"{hover}">{prefix}<gold>{type-label}</gold> <dark_gray>- <white>{prompt}</white></hover>'
+  started: "{prefix}<green>Started <white>{type-label}</white>."
+  win: "{prefix}<white>{player}</white> <gray>won <white>{type-label}</white> in <white>{time}</white>. Answer: <white>{answer}</white>"
+  timeout: "{prefix}<gray>Time is up. The answer was <white>{answer}</white>."
+  stopped: "{prefix}<gray>The round was stopped."
+  winner-left: "{prefix}<gray>The winner left before the reward, so nobody was paid."
+  already-running: "{prefix}<red>A round is already running."
+  already-ending: "{prefix}<gray>That round already has a winner."
+  none-running: "{prefix}<gray>No round is running."
+  not-enough-players: "{prefix}<red>Not enough players online. Need <white>{min}</white>."
+  unknown-type: "{prefix}<red>Unknown game. Use complete, guess-number, math, trivia, type, reverse, or unscramble."
+  type-disabled: "{prefix}<red><white>{type-label}</white> is disabled."
+  no-content: "{prefix}<red>That game has nothing to ask."
+  answer-wrong: "{prefix}<red>That is not the answer."
+  answer-capitalization: "{prefix}<red>Right letters, wrong capitals."
+  answer-late: "{prefix}<gray>Someone else was first."
+  toggle-hidden: "{prefix}<gray>Game messages and sounds are hidden for you. Your own guesses still get a reply."
+  toggle-shown: "{prefix}<green>Game messages and sounds are visible again."
+  top-header: "{prefix}<white>Top wins<gray>{scope}"
+  top-line: "<gray>{place}. <white>{player}</white> <dark_gray>- <white>{wins}</white>"
+  top-empty: "{prefix}<gray>No wins yet."
+  record-line: "{prefix}<gray>Fastest <white>{type-label}</white>: <white>{player}</white> in <white>{time}</white>."
+  status-header: "{prefix}<white>Last started"
+  status-line: "<gray>{type-label}: <white>{when}</white>"
+  status-never: "never"
+
+games:
+  complete:
+    enabled: true
+    weight: 10
+    hide-percent: 40
+    prompt: "{masked}"
+    hover: "Type the full phrase. Underscores are hidden letters."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []
+  guess-number:
+    enabled: true
+    weight: 10
+    min: 1
+    max: 100
+    prompt: "Guess a whole number from {min} to {max}."
+    hover: "Type only the number."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []
+  math:
+    enabled: true
+    weight: 10
+    min: 1
+    max: 30
+    operations:
+      - add
+      - subtract
+      - multiply
+      - divide
+    prompt: "What is {expression}?"
+    hover: "Type the whole number. Division stays a whole number."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []
+  trivia:
+    enabled: true
+    weight: 10
+    prompt: "{question}"
+    hover: "Type the answer by itself."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []
+  type:
+    enabled: true
+    weight: 10
+    prompt: "Type this: {word}"
+    hover: "Type the phrase exactly."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []
+  reverse:
+    enabled: true
+    weight: 10
+    prompt: "Reverse this: {reversed}"
+    hover: "Type the phrase forwards."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []
+  unscramble:
+    enabled: true
+    weight: 10
+    prompt: "Unscramble: {scrambled}"
+    hover: "Each word is scrambled on its own. Spaces stay put."
+    rewards:
+      commands:
+        - "minecraft:give {player} diamond 1"
+      items: []

@@ -1,0 +1,34 @@
+# Extra words and phrases. Names from the server's material list are added in memory at startup.
+# This file is written only when it is missing. Reload does not replace it.
+
+words:
+  - Jungle Sapling
+  - Diamond Sword
+  - Ender Pearl
+  - Golden Apple
+  - Ancient Debris
+  - Crying Obsidian
+  - Sweet Berries
+  - Mossy Cobblestone
+  - Enchanting Table
+  - Blast Furnace
+  - Netherite Ingot
+  - Totem of Undying
+  - Spawner Minecart
+  - Cherry Grove
+  - Deepslate Tiles
+  - Amethyst Shard
+  - Recovery Compass
+  - Sculk Sensor
+  - Echo Shard
+  - Breeze Rod
+  - Creeper
+  - Elytra
+  - Trident
+  - Allay
+  - Warden
+  - Sniffer
+  - Catalyst
+  - Pickaxe
+  - Obsidian
+  - Redstone

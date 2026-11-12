@@ -1,0 +1,58 @@
+# Questions are plain text. The chat line has to match one answer, and nothing else.
+# This file is written only when it is missing. Reload does not replace it.
+
+questions:
+  - question: "How many slots does a single chest have?"
+    answers:
+      - "27"
+  - question: "How many iron ingots does a bucket take?"
+    answers:
+      - "3"
+      - "three"
+  - question: "Which mob drops a blaze rod?"
+    answers:
+      - "blaze"
+  - question: "Which dimension is the Ender Dragon fought in?"
+    answers:
+      - "the end"
+      - "end"
+  - question: "What do eyes of ender lead you toward?"
+    answers:
+      - "stronghold"
+      - "a stronghold"
+  - question: "How many obsidian blocks is the smallest nether portal frame?"
+    answers:
+      - "10"
+      - "ten"
+  - question: "Which tool do you need to mine stone?"
+    answers:
+      - "pickaxe"
+      - "a pickaxe"
+  - question: "What liquid, with water, makes obsidian?"
+    answers:
+      - "lava"
+  - question: "Which mob drops gunpowder?"
+    answers:
+      - "creeper"
+  - question: "How many wool blocks does a bed take?"
+    answers:
+      - "3"
+      - "three"
+  - question: "What is the highest level of Fortune?"
+    answers:
+      - "3"
+      - "three"
+  - question: "Which hostile mob is three blocks tall?"
+    answers:
+      - "enderman"
+      - "an enderman"
+  - question: "How many crying obsidian blocks does a respawn anchor take?"
+    answers:
+      - "6"
+      - "six"
+  - question: "What item lights a nether portal, besides a fire charge?"
+    answers:
+      - "flint and steel"
+  - question: "Which ore do you mine for netherite scrap?"
+    answers:
+      - "ancient debris"
