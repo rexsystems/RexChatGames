@@ -11,11 +11,14 @@ import me.rexsystems.rexChatGames.player.OnlinePlayers;
 import me.rexsystems.rexChatGames.stats.StatsStore;
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
 public final class RexChatGames extends JavaPlugin {
+
+    private static final int BSTATS_PLUGIN_ID = 35270;
 
     private Settings settings;
     private StatsStore stats;
@@ -47,6 +50,7 @@ public final class RexChatGames extends JavaPlugin {
             getLogger().info("PlaceholderAPI expansion registered.");
         }
         startTicking();
+        new Metrics(this, BSTATS_PLUGIN_ID);
         getLogger().info("RexChatGames enabled.");
     }
 
