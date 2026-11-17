@@ -55,4 +55,4 @@ Aliases: `/rcg`, `/chatgames`
 
 Type ids: `complete`, `guess-number`, `math`, `trivia`, `type`, `reverse`, `unscramble`.
 
-Documentation: https://rexsystems.me/docs/rexchatgames
+Documentation: https://docs.rexsystems.me/rexchatgames/

@@ -55,7 +55,7 @@ Aliases: `/rcg`, `/chatgames`
 
 The pages in [docs/](docs/index.md) drop into a Starlight site at `src/content/docs/rexchatgames/`. Paste `docs/sidebar.mjs` into the site sidebar.
 
-Full docs: [https://rexsystems.me/docs/rexchatgames](https://rexsystems.me/docs/rexchatgames)
+Full docs: [https://docs.rexsystems.me/rexchatgames/](https://docs.rexsystems.me/rexchatgames/)
 
 ## License
 
